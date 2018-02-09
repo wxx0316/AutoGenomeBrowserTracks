@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="google-site-verification" content="Pd3bAKD6nTvh1N44dByfyYFAzSyXQ2lcj87cfAyWoqM" />
+<title> test_data_hub </title>
+
+<!-- Table style -->
+
+
+<link rel="stylesheet" type="text/css" href="static/css/jquery.dataTables.css">
+
+<!--
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+-->
+<!--
+<link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="static/css/dataTables.bootstrap4.css">
+-->
+
+<!-- Load jQuery and Sheetrock -->
+<script src="static/js/jquery-3.1.1.min.js"></script>
+<script src="static/js/sheetrock.min.js"></script>
+<script src="static/js/jquery.dataTables.js"></script>
+</head>
+
+
+<body>
+
+<h2>
+Test for data hub.
+</h2>
+
+<script src="static/js/functions.js"></script>
+
+<script>
+
+//Dir
+$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+
+loadTable()
+
+</script>
+
+
+<p>
+Load data from this <a href="https://drive.google.com/open?id=1y7iJXDp2GBF5bQV-0bvKl-s-T4TD2JJVhDdf_xByNjw">Google spreadsheet</a> and automatically create UCSC genome browser views.
+</p>
+
+<p>
+  <button type="button" onclick="refresh()">Reload data</button>
+<!--
+  <button type="button" onclick="configuration()">Configure</button>
+-->
+  <button type="button" onclick="sendToUCSC()">Send to UCSC Genome Browser</button>
+  <button type="button" onclick="cleanHubs()">Clean hubs</button>
+<!--
+  <button type="button" onclick="testAjax()">Test ajax()</button>
+
+  <button type="button" onclick="testUCSC()">Test open UCSC</button>
+-->
+
+</p>
+
+<p>
+Quicklinks:<br>
+<!--
+<a href="http://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=wxx0316&hgS_otherUserSessionName=TSA_hub_by_Yang_Zhang_new" target="_blank">Yu Chen paper</a><br>
+
+<a href="http://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=wxx0316&hgS_otherUserSessionName=TSA_DamID_smooth_new" target="_blank">TSA-Seq&DamID</a><br>
+-->
+
+<a href="http://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=wxx0316&hgS_otherUserSessionName=4DN_RepliSeq_hg19" target="_blank">H1_Repli-Seq_Multi-Fraction_hg19</a><br>
+<a href="http://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=wxx0316&hgS_otherUserSessionName=4DN_RepliSeq_hg38" target="_blank">H1_Repli-Seq_Multi-Fraction_hg38</a><br>
+
+
+
+
+</p>
+
+
+<p>
+Contact: yuchuanw@andrew.cmu.edu
+</p>
+
+<script>
+//$(document).ready(function() {
+//    $('#table').DataTable();
+//} );
+</script>
+
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/9.js?i=5qdfrgioph0&amp;t=Live%20Statistics" async="async"></script>
+
+</body>
+</html>
